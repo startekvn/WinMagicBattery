@@ -1,0 +1,35 @@
+﻿<Window x:Class="MagicKeyboardMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Magic Keyboard 設定" Height="250" Width="400"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="#F3F4F6">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="設備掃描與綁定" FontSize="20" FontWeight="Bold" Foreground="#1F2937" Margin="0,0,0,15"/>
+
+        <TextBlock Grid.Row="1" Text="請從下方選擇你要監控電量的 Magic Keyboard：" FontSize="14" Foreground="#4B5563" Margin="0,0,0,5"/>
+
+        <ComboBox Grid.Row="2" x:Name="DeviceComboBox" Height="35" FontSize="14" Padding="5">
+        </ComboBox>
+
+        <TextBlock Grid.Row="3" x:Name="StatusText" Text="正在掃描設備..." FontSize="12" Foreground="#6B7280" Margin="0,10,0,0" VerticalAlignment="Top"/>
+
+        <Button Grid.Row="4" x:Name="SaveButton" Content="儲存並開始監控" Height="40" FontSize="14" FontWeight="Bold" 
+                Background="#0078D4" Foreground="White" BorderThickness="0" Cursor="Hand" Click="SaveButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
