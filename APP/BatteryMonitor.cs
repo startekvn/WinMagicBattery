@@ -5,6 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Win32.SafeHandles; // 加入這個來安全管理 Handle
 using HidLibrary;
+// 記得在檔案最上面加入這行，才能使用 Debug 類別
+using System.Diagnostics;
 
 namespace MagicKeyboardMonitor
 {
@@ -36,23 +38,40 @@ namespace MagicKeyboardMonitor
         public async Task StartMonitoringAsync(int targetPid)
         {
             _isMonitoring = true;
+            int consecutiveFailures = 0;
+            const int MAX_FAILURES_ALLOWED = 3; 
 
             while (_isMonitoring)
             {
                 int batteryLevel = GetBatteryLevel(targetPid);
-
+                Debug.WriteLine($"[Monitor] battery: {batteryLevel}");
                 if (batteryLevel >= 0)
                 {
+                    Debug.WriteLine("[Monitor] -> OnBatteryUpdated event");
+                    // get battery -> reset
+                    consecutiveFailures = 0;
                     OnBatteryUpdated?.Invoke(batteryLevel);
                 }
                 else
                 {
-                    OnDeviceLost?.Invoke();
+                    // fail
+                    consecutiveFailures++;
+
+                    // 只有當「連續失敗次數」達到我們設定的上限時，才真正觸發斷線 UI
+                    if (consecutiveFailures >= MAX_FAILURES_ALLOWED)
+                    {
+                        Debug.WriteLine("[Monitor] Can't find device -> OnDeviceLost event");
+                        OnDeviceLost?.Invoke();
+                        // avoid infinite
+                        consecutiveFailures = MAX_FAILURES_ALLOWED;
+                    }
                 }
 
+                // 5sec/time
                 await Task.Delay(5000);
             }
         }
+
 
         public void StopMonitoring()
         {
