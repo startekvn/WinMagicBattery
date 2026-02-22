@@ -4,7 +4,9 @@
         Title="Magic Keyboard Settings" Width="400"
         SizeToContent="Height" MinHeight="280"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="#F3F4F6">
+        Background="#F3F4F6"
+        Icon="pack://application:,,,/logo/no-back-logo.ico"
+        >
 
     <Grid Margin="20">
         <Grid.RowDefinitions>

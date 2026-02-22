@@ -10,7 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="logo\no-back-logo.ico" />
+    <None Remove="no-back-logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="hidlibrary" Version="3.3.40" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="logo\no-back-logo.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="logo\logo.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="logo\no-back-logo.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

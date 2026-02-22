@@ -12,7 +12,7 @@ namespace MagicKeyboardMonitor
         private BatteryMonitor? _batteryMonitor;
         private DashboardWindow? _dashboardWindow; // 宣告儀表板視窗
         private int _currentBatteryLevel = -1;     // 記住當前電量
-
+        private Icon? _appIcon;
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -20,12 +20,12 @@ namespace MagicKeyboardMonitor
 
             _notifyIcon = new NotifyIcon();
 
-            // ==========================================
-            // 👉 未來你有自己的 icon.ico 時，改成這樣寫：
-            // _notifyIcon.Icon = new System.Drawing.Icon("你的圖示路徑.ico");
-            // 現在先暫時用系統內建的安全圖示代替
-            _notifyIcon.Icon = System.Drawing.SystemIcons.Application;
-            // ==========================================
+
+            var uri = new Uri("pack://application:,,,/logo/no-back-logo.ico");
+            var resourceStream = Application.GetResourceStream(uri);
+
+            _appIcon = new Icon(resourceStream.Stream);
+            _notifyIcon.Icon = _appIcon;
 
             _notifyIcon.Visible = true;
             _notifyIcon.Text = "Magic Keyboard Monitor (Waiting...)";

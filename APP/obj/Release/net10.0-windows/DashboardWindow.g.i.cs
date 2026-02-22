@@ -69,7 +69,7 @@ namespace MagicKeyboardMonitor {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/APP;V1.0.0.0;component/dashboardwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/APP;component/dashboardwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DashboardWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
