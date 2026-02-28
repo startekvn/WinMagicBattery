@@ -6,6 +6,8 @@ A lightweight, elegant system tray utility that monitors the battery level of yo
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat-square&logo=.net)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
+<img src="APP/logo/main.png" width="1000" align="center">
+
 ## ✨ Features
 
 * **Real-time Battery Monitoring**: Quietly runs in the background and displays the current battery level of your Magic Keyboard.
