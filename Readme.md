@@ -30,6 +30,12 @@ A lightweight, elegant system tray utility that monitors the battery level of yo
 4. Check **"Start automatically with Windows"** if you want it to run in the background permanently.
 5. Click **Save & Start Monitoring**.
 
+## 🔮 Future Work (Roadmap)
+
+* **Customizable Low Battery Alerts**: Allow users to set a specific battery percentage threshold to trigger desktop notifications when it's time to recharge.
+* **Extended Apple Ecosystem Support**: Expand compatibility beyond keyboards to monitor other Apple devices, such as AirPods, Magic Mouse, and Magic Trackpad.
+* **Multi-Device Monitoring**: Support tracking and displaying the battery levels of multiple Apple devices simultaneously within the dashboard.
+
 ## 🛠️ Built With
 
 * **C# / WPF** - The UI and core logic.
