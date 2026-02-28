@@ -1,4 +1,4 @@
-# 🔋 Magic Keyboard Monitor for Windows
+# <img src="APP/logo/no-back-logo.svg" width="45" align="top"> Magic Keyboard Monitor for Windows
 
 A lightweight, elegant system tray utility that monitors the battery level of your Apple Magic Keyboard on Windows. 
 
