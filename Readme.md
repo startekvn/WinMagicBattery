@@ -18,10 +18,12 @@ A lightweight, elegant system tray utility that monitors the battery level of yo
 
 ### Installation
 1. Go to the [Releases](../../releases) page.
-2. Download the latest `MagicKeyboardMonitor.exe`.
-3. Double-click to run! (No installation or extra `.dll` files needed).
+2. Download the latest `WinMagicBattery.zip`.
+3. Extract the ZIP file to your preferred folder.
+4. Double-click the APP.exe file to run ! (No installation or extra `.dll` files needed).
 
 ### How to Use
+**NOTE: Your device must connect to your PC first!**
 1. Launch the app. It will appear in your Windows System Tray (bottom right corner).
 2. Right-click the tray icon and select **Settings**.
 3. Select your connected Magic Keyboard from the dropdown menu.
