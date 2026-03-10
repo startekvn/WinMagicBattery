@@ -2,6 +2,8 @@
 
 A lightweight, elegant system tray utility that monitors the battery level of your Apple Magic Keyboard on Windows. 
 
+👉 **[Click here to visit the main GitHub Repository for the latest source code and releases](https://github.com/hank1101444/WinMagicBattery)**
+
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=flat-square&logo=windows)
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat-square&logo=.net)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
